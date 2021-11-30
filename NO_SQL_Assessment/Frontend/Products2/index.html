@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+
+    <title>Shopify</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col container_column">
+              <div class="row">
+                <div class="col logo">
+                  <div>
+                    <p class="company_name"><span class="initials">P</span>roduct <span class="initials">S</span>hoppy</p>
+                  </div>
+                  <div>
+                    <img src="./images/shopping-fun.png" alt="" style="width: 100px;" class="logo">
+                  </div>                  
+                </div>       
+            </div>
+            </div>
+          <div class="col col-7 container_column2">
+              <div>
+                  <p class="header_p"><i class="fas fa-map-marker-alt header_icons"></i>Shop Locator</p>
+                  <p class="header_p"><i class="fas fa-truck header_icons"></i>Track Order</p>
+                  <p class="header_p"><i class="fas fa-phone-volume header_icons"></i>001 234 5678</p>
+                  <p class="header_p"><i class="fas fa-lock header_icons"></i>Signup</p>
+                  <p class="header_p"><i class="fas fa-user-plus header_icons"></i>Signin</p>
+              </div>
+              <div>
+                  <input class="header_search" type="text">
+                  <p class="header_search_button"><i class="fas fa-search search_product"></i></p>
+                  <p class="header_cart_button"><i class="fas fa-cart-arrow-down cart_icon"></i></p>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="categories-section">
+          <div class="container categories">
+            <div class="row">
+              <div class="col col-cate">
+                <div class="dropdown">
+                  <button class="btn btn-secondary  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    All Categories
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col col-cate">
+                  <a href="">Home</a>               
+              </div>
+              <div class="col col-cate">
+                <a href="">About us</a>
+              </div>
+              <div class="col col-cate">
+                <div class="dropdown">
+                  <button class="btn btn-secondary btn-categories dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Kitchen
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col col-cate">
+                <div class="dropdown">
+                  <button class="btn btn-secondary btn-categories dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Household
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col col-cate">
+                <div>
+                  <a href="">FAQ</a>
+                </div>
+              </div>
+              <div class="col col-cate">
+                <div class="dropdown">
+                  <button class="btn btn-secondary btn-categories dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Pages
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col col-cate"><a href="">Contact</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="heading_products">
+          <div class="heading_products_heading">
+            <p>Our Top Products</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-3">
+            <div class="sidebar">
+              <div class="widget">
+                <h3>Search Here</h3>
+                <div class="form">
+                  <form action="#">
+                    <input type="text" placeholder="Product Name">
+                    <button onClick="getOrders()" type="submit" class="btn-1">
+                      <i class="fas fa-angle-right sidebar_search_product"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+  
+              <div class="widget">
+                <h3>Price Range</h3>
+                <p>
+                  <output>$541-$1000</output>
+                </p>
+                <input type="range">
+              </div>
+  
+              <div class="widget">
+                <h3>Food Preference</h3>
+                <ul>
+                  <li>
+                    <input type="checkbox" id="veg">
+                    <label for="veg">Vegetarian</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="non-veg">
+                    <label for="non-veg">Non Vegetarian</label>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="widget">
+                <h3>Customer Review</h3>
+                <ul class="reviews">
+                <li>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>5.0</span>
+                </li>
+               <li>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>5.0</span>
+               </li>
+               <li>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>5.0</span>
+               </li>
+               <li>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>5.0</span>
+               </li>
+                </ul>
+               </div>
+  
+  
+               <div class="widget">
+                <h3>Discount</h3>
+                <ul>
+                <li>
+                <input type="checkbox" id="discount_1">
+                <label for="discount_1">5% or more</label>
+                </li>
+                <li>
+                <input type="checkbox" id="discount_2">
+                <label for="discount_2">10% or 
+               more</label>
+                </li>
+                <li>
+                <input type="checkbox" id="discount_3">
+                <label for="discount_3">20% or 
+               more</label>
+                </li>
+                <li>
+                <input type="checkbox" id="discount_4">
+                <label for="discount_4">30% or 
+               more</label>
+                </li>
+                <li>
+                <input type="checkbox" id="discount_5">
+                <label for="discount_5">40% or 
+               more</label>
+                </li>
+                </ul>
+               </div>
+
+            </div>
+          </div>
+
+          
+          <div class="col">
+            <div class="nuts">
+              <div class="row">
+                <h3 style="text-align: center; padding-bottom: 30px;">Nuts</h3>
+                <div class="col">
+                  <div class="card text-center" style="width: 15rem; border: none;">
+                    <img class="card-img-top" src="./images/Nuts.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title" style=" text-align: center;">Cashew</h5>
+                      <p class="card-text" style="color: purple; text-align: center;">Quick View</p>
+                      <a href="#" class="btn btn-primary add_to_cart">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card text-center" style="width: 15rem; border: none;">
+                    <img class="card-img-top" src="./images/Nuts.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title" style=" text-align: center;">Almonds</h5>
+                      <p class="card-text" style="color: purple; text-align: center;">Quick View</p>
+                      <a href="#" class="btn btn-primary add_to_cart">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card text-center" style="width: 15rem; border: none;">
+                    <img class="card-img-top" src="./images/Nuts.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title" style=" text-align: center;">Nut</h5>
+                      <p class="card-text" style="color: purple; text-align: center;">Quick View</p>
+                      <a" href="#" class="btn btn-primary add_to_cart">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>    
+            
+            
+            <div class="nuts">
+              <div class="row">
+                <h3 style="text-align: center; padding-bottom: 30px;">Almonds</h3>
+                <div class="col">
+                  <div class="card text-center" style="width: 15rem; border: none;">
+                    <img class="card-img-top" src="./images/almonds.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title" style=" text-align: center;">Cashew</h5>
+                      <p class="card-text" style="color: purple; text-align: center;">Quick View</p>
+                      <a href="#" class="btn btn-primary add_to_cart">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card text-center" style="width: 15rem; border: none;">
+                    <img class="card-img-top" src="./images/almonds.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title" style=" text-align: center;">Almonds</h5>
+                      <p class="card-text" style="color: purple; text-align: center;">Quick View</p>
+                      <a href="#" class="btn btn-primary add_to_cart">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card text-center" style="width: 15rem; border: none;">
+                    <img class="card-img-top" src="./images/almonds.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title" style=" text-align: center;">Nut</h5>
+                      <p class="card-text" style="color: purple; text-align: center;">Quick View</p>
+                      <a" href="#" class="btn btn-primary add_to_cart">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+
+
+        
+          <div class="footer">
+            <section id="footer">
+              <div className="footer_div">
+                <a href="">
+                  <i class="fab fa-facebook fa-2x font-awesome-copyright"></i>
+                </a>
+                <a href="">
+                  <i class="fab fa-instagram fa-2x font-awesome-copyright"></i>
+                </a>
+                <a href="">
+                  <i class="fab fa-linkedin fa-2x font-awesome-copyright"></i>
+                </a>
+                <a href="">
+                  <i class="fab fa-twitter fa-2x font-awesome-copyright"></i>
+                </a>
+              </div>
+      
+              <div className="footer_div_companyname">
+                <p class="Copyright">
+                  ©️Copyright 2021 <span>shoppy</span>
+                </p>
+              </div>
+            </section>
+          </div>
+
+
+          <script>
+            function getOrders() {
+                console.log("Button Clicked");
+                var productName = document.getElementById("search").value;
+                var http = new XMLHttpRequest();
+                var searchDetails = {
+                    "name" : productName,
+                };
+                var data = JSON.stringify(searchDetails);
+                var div = document.querySelector("#products");
+                div.innerHTML = "";
+                var url = "http://localhost:3000/api/product/getProducts";
+                http.onreadystatechange = function() {
+                    if(http.readyState == 4 && http.status == 200) {
+                        var productDiv = document.createElement("div");
+                        productDiv.className = "col";
+                        var p = document.createElement("h5");
+                        p.innerText = http.responseObject.name;
+                        productDiv.appendChild(p);
+                        div.appendChild(productDiv);
+                    }
+                }
+                http.open('get',url,true);
+                http.setRequestHeader('Content-Type','application/json');
+                http.setRequestHeader("Authorization",localStorage.getItem("token"));
+                http.send(data);
+    
+            }
+        </script>
+    
+    <script src="https://kit.fontawesome.com/96f52bf121.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</body>
+</html>
