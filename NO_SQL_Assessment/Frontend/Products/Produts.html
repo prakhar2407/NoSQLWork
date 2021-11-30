@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Products.css">
+</head>
+<body>
+    <div class="row">
+        <aside>
+            <ul>
+                <li>
+                    <a href="#" onclick="getProducts()">Get Orders</a>
+                </li>
+            </ul>
+        </aside>
+        <main>
+            <input type="text" id="search" placeholder="Search Product">
+            <div class="row" id="products">
+            </div>
+            <button id="getData" onClick="getOrders()">Get Data</button>
+        </main>
+    </div>
+
+    <script>
+        function getOrders() {
+            console.log("Button Clicked");
+            var productName = document.getElementById("search").value;
+            var http = new XMLHttpRequest();
+            var searchDetails = {
+                "name" : productName,
+            };
+            var data = JSON.stringify(searchDetails);
+            var div = document.querySelector("#products");
+            div.innerHTML = "";
+            var url = "http://localhost:3000/api/product/getProducts";
+            http.onreadystatechange = function() {
+                if(http.readyState == 4 && http.status == 200) {
+                    var productDiv = document.createElement("div");
+                    productDiv.className = "col";
+                    var p = document.createElement("p");
+                    p.innerText = http.responseObject;
+                    productDiv.appendChild(p);
+                    div.appendChild(productDiv);
+                }
+            }
+            http.open('get',url,true);
+            http.setRequestHeader('Content-Type','application/json');
+            http.setRequestHeader("Authorization",localStorage.getItem("token"));
+            http.send(data);
+
+        }
+    </script>
+    
+</body>
+</html>
